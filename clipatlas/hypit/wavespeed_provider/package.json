@@ -1,0 +1,14 @@
+{
+  "name": "@hypit/provider-wavespeed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/provider.js" },
+  "hypit": { "activation": "./src/activation.js" },
+  "dependencies": {
+    "@hypit/endpoint-kit": "workspace:*",
+    "@hypit/generation": "workspace:*",
+    "@hypit/protocol": "workspace:*",
+    "@hypit/runtime-kit": "workspace:*"
+  }
+}

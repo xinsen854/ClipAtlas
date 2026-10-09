@@ -1,0 +1,33 @@
+# UTF-8
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 1, 4, 0),
+    prodvers=(1, 1, 4, 0),
+    mask=0x3f,
+    flags=0x0,
+    OS=0x40004,
+    fileType=0x1,
+    subtype=0x0,
+    date=(0, 0)
+  ),
+  kids=[
+    StringFileInfo(
+      [
+        StringTable(
+          '080404b0',
+          [
+            StringStruct('CompanyName', 'ClipAtlas'),
+            StringStruct('FileDescription', 'ClipAtlas 本地视频素材与剪辑草稿工具'),
+            StringStruct('FileVersion', '1.1.4'),
+            StringStruct('InternalName', 'ClipAtlas'),
+            StringStruct('LegalCopyright', 'Copyright (C) 2026 ClipAtlas'),
+            StringStruct('OriginalFilename', 'ClipAtlas.exe'),
+            StringStruct('ProductName', 'ClipAtlas'),
+            StringStruct('ProductVersion', '1.1.4')
+          ]
+        )
+      ]
+    ),
+    VarFileInfo([VarStruct('Translation', [2052, 1200])])
+  ]
+)

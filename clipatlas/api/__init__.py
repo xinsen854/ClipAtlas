@@ -1,0 +1,1 @@
+"""ClipAtlas HTTP API package."""

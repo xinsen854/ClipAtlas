@@ -1,0 +1,22 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store
+data/
+uploads/
+artifacts/
+.codex-runtime/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-lan/
+*.tsbuildinfo
+
+# Desktop build artifacts
+dist/
+build/
+smoke-assets/

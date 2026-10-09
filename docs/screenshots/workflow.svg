@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-labelledby="title desc">
+  <title id="title">ClipAtlas 运行逻辑</title>
+  <desc id="desc">从导入视频到 AI 标注、人工修正、搜索、自动粗剪和剪映导出的流程图，另有局域网只读搜索分支。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#f5efe5"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#7c5b35" flood-opacity=".16"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#c86b05"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="520" rx="28" fill="url(#bg)"/>
+  <text x="70" y="72" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#2f3945">ClipAtlas 怎么工作</text>
+  <text x="72" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#806d5b">本地素材建立索引，搜索和文案驱动粗剪，局域网端负责只读共享</text>
+
+  <g filter="url(#shadow)" font-family="Microsoft YaHei, Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(55 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">导入视频</text><text x="90" y="72" font-size="15" fill="#8b7967">本地素材目录</text></g>
+    <g transform="translate(285 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">自动解析</text><text x="90" y="72" font-size="15" fill="#8b7967">镜头 / 代表帧</text></g>
+    <g transform="translate(515 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">AI 标注</text><text x="90" y="72" font-size="15" fill="#8b7967">人物 / 动作 / 场景</text></g>
+    <g transform="translate(745 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">标注数据库</text><text x="90" y="72" font-size="15" fill="#8b7967">SQLite 持久保存</text></g>
+    <g transform="translate(975 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">搜索 / 旁白</text><text x="90" y="72" font-size="15" fill="#8b7967">自然语言找画面</text></g>
+    <g transform="translate(1205 175)"><rect width="140" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="70" y="43" font-size="22" font-weight="700" fill="#2f3945">自动粗剪</text><text x="70" y="72" font-size="15" fill="#8b7967">按时长编排</text></g>
+  </g>
+
+  <g stroke="#c86b05" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M235 225 H280"/><path d="M465 225 H510"/><path d="M695 225 H740"/><path d="M925 225 H970"/><path d="M1155 225 H1200"/>
+  </g>
+
+  <g font-family="Microsoft YaHei, Arial, sans-serif">
+    <rect x="505" y="350" width="200" height="72" rx="16" fill="#fff4de" stroke="#e4a04d" stroke-width="2"/>
+    <text x="605" y="382" text-anchor="middle" font-size="20" font-weight="700" fill="#2f3945">人工修正</text>
+    <text x="605" y="406" text-anchor="middle" font-size="14" fill="#8b7967">修正后优先用于搜索</text>
+    <path d="M835 275 C835 330 705 338 660 350" stroke="#c86b05" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M505 386 C430 386 420 275 600 275" stroke="#c86b05" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="955" y="350" width="340" height="72" rx="16" fill="#eef8ef" stroke="#6ea875" stroke-width="2"/>
+    <text x="1125" y="382" text-anchor="middle" font-size="20" font-weight="700" fill="#2f3945">局域网共享端</text>
+    <text x="1125" y="406" text-anchor="middle" font-size="14" fill="#55765a">其他电脑搜索 / 预览，默认只读</text>
+    <path d="M835 275 C835 330 965 338 1020 350" stroke="#6ea875" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="70" y="475" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#806d5b">主程序维护素材库和标注；局域网客户端不复制数据库，也不要求主程序一直打开。</text>
+</svg>
