@@ -1,47 +1,212 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-labelledby="title desc">
-  <title id="title">ClipAtlas 运行逻辑</title>
-  <desc id="desc">从导入视频到 AI 标注、人工修正、搜索、自动粗剪和剪映导出的流程图，另有局域网只读搜索分支。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">ClipAtlas — 14-layer intelligence, two creative workflows, one editable output</title>
+  <desc id="desc">A shared local media intelligence layer feeds two independent workflows: asset-first AI Director and script-plus-voiceover editing. Both converge on an editable timeline exported to Jianying or OTIO. Hypit is shown as a separate open-source video workflow project.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fffaf1"/>
-      <stop offset="1" stop-color="#f5efe5"/>
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#111b35"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#7c5b35" flood-opacity=".16"/>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#9333ea"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#047857"/>
+      <stop offset="1" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity=".36"/>
     </filter>
-    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-      <path d="M0,0 L12,6 L0,12 Z" fill="#c86b05"/>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#60a5fa"/>
     </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#c084fc"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#5eead4"/>
+    </marker>
+    <style>
+      text{font-family:Inter,"Segoe UI","Microsoft YaHei",Arial,sans-serif}
+      .title{font-size:43px;font-weight:800;fill:#f8fafc;letter-spacing:-.5px}
+      .subtitle{font-size:18px;fill:#9fb0ca}
+      .section{font-size:20px;font-weight:750;fill:#f8fafc}
+      .label{font-size:17px;font-weight:700;fill:#f8fafc}
+      .small{font-size:14px;fill:#c1cde0}
+      .tiny{font-size:12px;fill:#91a2be}
+      .card{fill:#141f37;stroke:#334561;stroke-width:1.5}
+      .inner{fill:#182744;stroke:#324765;stroke-width:1}
+      .connector{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+    </style>
   </defs>
-  <rect width="1400" height="520" rx="28" fill="url(#bg)"/>
-  <text x="70" y="72" font-family="Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" fill="#2f3945">ClipAtlas 怎么工作</text>
-  <text x="72" y="108" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#806d5b">本地素材建立索引，搜索和文案驱动粗剪，局域网端负责只读共享</text>
+  <rect width="1600" height="1120" rx="30" fill="url(#bg)"/>
+  <circle cx="1450" cy="65" r="170" fill="#1d4ed8" opacity=".08"/>
+  <circle cx="80" cy="1040" r="200" fill="#7c3aed" opacity=".06"/>
 
-  <g filter="url(#shadow)" font-family="Microsoft YaHei, Arial, sans-serif" text-anchor="middle">
-    <g transform="translate(55 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">导入视频</text><text x="90" y="72" font-size="15" fill="#8b7967">本地素材目录</text></g>
-    <g transform="translate(285 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">自动解析</text><text x="90" y="72" font-size="15" fill="#8b7967">镜头 / 代表帧</text></g>
-    <g transform="translate(515 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">AI 标注</text><text x="90" y="72" font-size="15" fill="#8b7967">人物 / 动作 / 场景</text></g>
-    <g transform="translate(745 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">标注数据库</text><text x="90" y="72" font-size="15" fill="#8b7967">SQLite 持久保存</text></g>
-    <g transform="translate(975 175)"><rect width="180" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="90" y="43" font-size="22" font-weight="700" fill="#2f3945">搜索 / 旁白</text><text x="90" y="72" font-size="15" fill="#8b7967">自然语言找画面</text></g>
-    <g transform="translate(1205 175)"><rect width="140" height="100" rx="18" fill="#fff" stroke="#e4a04d" stroke-width="2"/><text x="70" y="43" font-size="22" font-weight="700" fill="#2f3945">自动粗剪</text><text x="70" y="72" font-size="15" fill="#8b7967">按时长编排</text></g>
+  <text x="64" y="72" class="title">ClipAtlas</text>
+  <text x="66" y="108" class="subtitle">14-LAYER VIDEO INTELLIGENCE  ·  TWO INDEPENDENT CREATIVE PATHS  ·  ONE EDITABLE OUTPUT</text>
+  <rect x="1280" y="48" width="250" height="42" rx="21" fill="#172554" stroke="#3b82f6"/>
+  <text x="1405" y="74" text-anchor="middle" font-size="14" font-weight="700" fill="#bfdbfe">LOCAL-FIRST AI WORKSPACE</text>
+
+  <!-- Shared intelligence foundation -->
+  <g filter="url(#shadow)">
+    <rect x="64" y="145" width="1472" height="285" rx="24" class="card"/>
+  </g>
+  <rect x="64" y="145" width="1472" height="7" rx="4" fill="url(#blue)"/>
+  <text x="92" y="185" class="section">01  SHARED FOUNDATION  /  素材智能底座</text>
+  <text x="1505" y="184" text-anchor="end" class="small">Analyze once · Reuse across workflows</text>
+
+  <rect x="92" y="210" width="205" height="76" rx="15" fill="#1e293b" stroke="#64748b"/>
+  <text x="194" y="239" text-anchor="middle" class="label">Local video library</text>
+  <text x="194" y="263" text-anchor="middle" class="small">本地视频 · 文件指纹</text>
+
+  <path d="M297 248 H330" class="connector" stroke="#60a5fa" marker-end="url(#arrowBlue)"/>
+  <rect x="337" y="210" width="230" height="76" rx="15" fill="url(#blue)"/>
+  <text x="452" y="239" text-anchor="middle" class="label">14-layer analysis</text>
+  <text x="452" y="263" text-anchor="middle" class="small">镜头切分 · 多模态理解</text>
+
+  <path d="M567 248 H600" class="connector" stroke="#60a5fa" marker-end="url(#arrowBlue)"/>
+  <rect x="607" y="210" width="220" height="76" rx="15" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="717" y="239" text-anchor="middle" class="label">Media knowledge base</text>
+  <text x="717" y="263" text-anchor="middle" class="small">SQLite · 标注 · 向量 · 时间</text>
+
+  <path d="M827 248 H860" class="connector" stroke="#60a5fa" marker-end="url(#arrowBlue)"/>
+  <rect x="867" y="210" width="225" height="76" rx="15" fill="#172554" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="979" y="239" text-anchor="middle" class="label">Multimodal retrieval</text>
+  <text x="979" y="263" text-anchor="middle" class="small">视觉 · ASR · OCR · 语义</text>
+
+  <path d="M1092 248 H1125" class="connector" stroke="#60a5fa" marker-end="url(#arrowBlue)"/>
+  <rect x="1132" y="210" width="370" height="76" rx="15" fill="#132f3b" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="1317" y="239" text-anchor="middle" class="label">Human correction loop</text>
+  <text x="1317" y="263" text-anchor="middle" class="small">人工校正 · 索引更新 · 结果可追溯</text>
+
+  <g>
+    <rect x="92" y="310" width="330" height="82" rx="14" class="inner"/>
+    <text x="112" y="338" class="label">SHOT-LEVEL</text>
+    <text x="112" y="362" class="small">镜头描述 · 人物 / 动作 / 场景</text>
+    <text x="112" y="380" class="tiny">可定位、可解释、可人工修正</text>
+
+    <rect x="440" y="310" width="330" height="82" rx="14" class="inner"/>
+    <text x="460" y="338" class="label">PARAGRAPH-LEVEL</text>
+    <text x="460" y="362" class="small">段落描述 · 语义片段 · 上下文</text>
+    <text x="460" y="380" class="tiny">跨镜头组织为有意义的内容区间</text>
+
+    <rect x="788" y="310" width="330" height="82" rx="14" class="inner"/>
+    <text x="808" y="338" class="label">MULTIMODAL INDEX</text>
+    <text x="808" y="362" class="small">视觉向量 · ASR 语音 · OCR 画面字</text>
+    <text x="808" y="380" class="tiny">关键词与语义相似召回互补</text>
+
+    <rect x="1136" y="310" width="366" height="82" rx="14" class="inner"/>
+    <text x="1156" y="338" class="label">EDITING-AWARE CONTEXT</text>
+    <text x="1156" y="362" class="small">事件关系 · 连续性 · 安全时间区间</text>
+    <text x="1156" y="380" class="tiny">从“搜到画面”走向“可用于剪辑”</text>
   </g>
 
-  <g stroke="#c86b05" stroke-width="4" fill="none" marker-end="url(#arrow)">
-    <path d="M235 225 H280"/><path d="M465 225 H510"/><path d="M695 225 H740"/><path d="M925 225 H970"/><path d="M1155 225 H1200"/>
+  <!-- Connect shared base to two independent paths -->
+  <path d="M717 430 V456 H405 V480" class="connector" stroke="#c084fc" marker-end="url(#arrowPurple)"/>
+  <path d="M717 456 H1190 V480" class="connector" stroke="#5eead4" marker-end="url(#arrowGreen)"/>
+
+  <!-- AI director workflow -->
+  <g filter="url(#shadow)">
+    <rect x="64" y="490" width="704" height="340" rx="23" class="card"/>
   </g>
+  <rect x="64" y="490" width="704" height="7" rx="4" fill="url(#purple)"/>
+  <text x="92" y="530" class="section">02A  AI DIRECTOR</text>
+  <text x="92" y="557" class="subtitle">素材驱动 · 从已有素材组织故事</text>
+  <rect x="92" y="582" width="648" height="42" rx="11" fill="#241c43" stroke="#7044a8"/>
+  <text x="416" y="609" text-anchor="middle" class="label">素材证据 → 故事方向 → 内容节点</text>
+  <g>
+    <rect x="92" y="642" width="145" height="66" rx="12" class="inner"/>
+    <text x="164" y="668" text-anchor="middle" class="label">Evidence</text>
+    <text x="164" y="690" text-anchor="middle" class="tiny">素材与来源</text>
+    <path d="M237 675 H254" class="connector" stroke="#c084fc" marker-end="url(#arrowPurple)"/>
 
-  <g font-family="Microsoft YaHei, Arial, sans-serif">
-    <rect x="505" y="350" width="200" height="72" rx="16" fill="#fff4de" stroke="#e4a04d" stroke-width="2"/>
-    <text x="605" y="382" text-anchor="middle" font-size="20" font-weight="700" fill="#2f3945">人工修正</text>
-    <text x="605" y="406" text-anchor="middle" font-size="14" fill="#8b7967">修正后优先用于搜索</text>
-    <path d="M835 275 C835 330 705 338 660 350" stroke="#c86b05" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
-    <path d="M505 386 C430 386 420 275 600 275" stroke="#c86b05" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <rect x="261" y="642" width="145" height="66" rx="12" class="inner"/>
+    <text x="333" y="668" text-anchor="middle" class="label">Story beats</text>
+    <text x="333" y="690" text-anchor="middle" class="tiny">叙事节点</text>
+    <path d="M406 675 H423" class="connector" stroke="#c084fc" marker-end="url(#arrowPurple)"/>
 
-    <rect x="955" y="350" width="340" height="72" rx="16" fill="#eef8ef" stroke="#6ea875" stroke-width="2"/>
-    <text x="1125" y="382" text-anchor="middle" font-size="20" font-weight="700" fill="#2f3945">局域网共享端</text>
-    <text x="1125" y="406" text-anchor="middle" font-size="14" fill="#55765a">其他电脑搜索 / 预览，默认只读</text>
-    <path d="M835 275 C835 330 965 338 1020 350" stroke="#6ea875" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <rect x="430" y="642" width="145" height="66" rx="12" class="inner"/>
+    <text x="502" y="668" text-anchor="middle" class="label">Shot plan</text>
+    <text x="502" y="690" text-anchor="middle" class="tiny">镜头需求</text>
+    <path d="M575 675 H592" class="connector" stroke="#c084fc" marker-end="url(#arrowPurple)"/>
+
+    <rect x="599" y="642" width="141" height="66" rx="12" fill="#3b1b5a" stroke="#a855f7"/>
+    <text x="669" y="668" text-anchor="middle" class="label">Director cut</text>
+    <text x="669" y="690" text-anchor="middle" class="tiny">导演草稿</text>
   </g>
+  <text x="92" y="750" class="small">目标：发现素材能讲什么、如何组织证据与叙事。</text>
+  <text x="92" y="778" class="small">约束：事实支持 · 镜头时长 · 连续性 · 视觉重复度</text>
+  <rect x="92" y="795" width="648" height="18" rx="9" fill="#3b1b5a" opacity=".65"/>
+  <text x="416" y="808" text-anchor="middle" font-size="11" font-weight="700" fill="#e9d5ff">ASSET-FIRST CREATIVE PATH</text>
 
-  <text x="70" y="475" font-family="Microsoft YaHei, Arial, sans-serif" font-size="17" fill="#806d5b">主程序维护素材库和标注；局域网客户端不复制数据库，也不要求主程序一直打开。</text>
+  <!-- Script + voiceover workflow -->
+  <g filter="url(#shadow)">
+    <rect x="832" y="490" width="704" height="340" rx="23" class="card"/>
+  </g>
+  <rect x="832" y="490" width="704" height="7" rx="4" fill="url(#green)"/>
+  <text x="860" y="530" class="section">02B  SCRIPT + VOICEOVER</text>
+  <text x="860" y="557" class="subtitle">文案驱动 · 从既定表达匹配画面</text>
+  <rect x="860" y="582" width="648" height="42" rx="11" fill="#103b3a" stroke="#0d9488"/>
+  <text x="1184" y="609" text-anchor="middle" class="label">导入文案 + 真人旁白 / AI 配音</text>
+  <g>
+    <rect x="860" y="642" width="145" height="66" rx="12" class="inner"/>
+    <text x="932" y="668" text-anchor="middle" class="label">Script</text>
+    <text x="932" y="690" text-anchor="middle" class="tiny">文案拆解</text>
+    <path d="M1005 675 H1022" class="connector" stroke="#5eead4" marker-end="url(#arrowGreen)"/>
+
+    <rect x="1029" y="642" width="145" height="66" rx="12" class="inner"/>
+    <text x="1101" y="668" text-anchor="middle" class="label">Semantic beats</text>
+    <text x="1101" y="690" text-anchor="middle" class="tiny">语义段落</text>
+    <path d="M1174 675 H1191" class="connector" stroke="#5eead4" marker-end="url(#arrowGreen)"/>
+
+    <rect x="1198" y="642" width="145" height="66" rx="12" class="inner"/>
+    <text x="1270" y="668" text-anchor="middle" class="label">Search</text>
+    <text x="1270" y="690" text-anchor="middle" class="tiny">逐段画面匹配</text>
+    <path d="M1343 675 H1360" class="connector" stroke="#5eead4" marker-end="url(#arrowGreen)"/>
+
+    <rect x="1367" y="642" width="141" height="66" rx="12" fill="#103b3a" stroke="#14b8a6"/>
+    <text x="1437" y="668" text-anchor="middle" class="label">Replace</text>
+    <text x="1437" y="690" text-anchor="middle" class="tiny">同语义替换</text>
+  </g>
+  <text x="860" y="750" class="small">目标：让每段表达找到含义、事实与时长匹配的画面。</text>
+  <text x="860" y="778" class="small">约束：旁白对齐 · 语义 / 事实 · 时长 · 同义候选</text>
+  <rect x="860" y="795" width="648" height="18" rx="9" fill="#103b3a" opacity=".85"/>
+  <text x="1184" y="808" text-anchor="middle" font-size="11" font-weight="700" fill="#ccfbf1">SCRIPT-FIRST CREATIVE PATH</text>
+
+  <!-- Converge to common editable output -->
+  <path d="M416 830 V858 H800 V878" class="connector" stroke="#c084fc" marker-end="url(#arrowPurple)"/>
+  <path d="M1184 830 V858 H800" class="connector" stroke="#5eead4" marker-end="url(#arrowGreen)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="888" width="1040" height="148" rx="22" fill="#191f31" stroke="#f59e0b" stroke-width="1.7"/>
+  </g>
+  <rect x="64" y="888" width="1040" height="7" rx="4" fill="url(#gold)"/>
+  <text x="92" y="927" class="section">03  ONE EDITABLE OUTPUT</text>
+  <text x="92" y="954" class="subtitle">统一可编辑草稿 · 不是只能观看的扁平化视频</text>
+  <rect x="92" y="974" width="650" height="40" rx="10" fill="#352916" stroke="#a16207"/>
+  <text x="417" y="999" text-anchor="middle" class="label">替换镜头  ·  裁切  ·  拆分  ·  重排  ·  继续精剪</text>
+  <rect x="762" y="974" width="144" height="40" rx="10" fill="#422006" stroke="#f59e0b"/>
+  <text x="834" y="999" text-anchor="middle" class="label">剪映草稿</text>
+  <rect x="920" y="974" width="155" height="40" rx="10" fill="#422006" stroke="#f59e0b"/>
+  <text x="997" y="999" text-anchor="middle" class="label">OTIO Timeline</text>
+
+  <!-- Hypit separate ecosystem -->
+  <g filter="url(#shadow)">
+    <rect x="1132" y="888" width="404" height="148" rx="22" fill="#14263a" stroke="#64748b" stroke-width="1.5" stroke-dasharray="7 5"/>
+  </g>
+  <text x="1156" y="927" class="section">HYPIT · SEPARATE OSS PROJECT</text>
+  <text x="1156" y="954" class="small">参考视频 / 创作描述 → 可重跑视频工作流</text>
+  <text x="1156" y="979" class="small">独立仓库 · 独立许可证 · 不混同为同一模块</text>
+  <text x="1156" y="1012" font-size="14" font-weight="700" fill="#93c5fd">github.com/hypit-ai/hypit</text>
+
+  <text x="64" y="1080" class="tiny">Concept map of product capabilities · Exact stages depend on enabled processors, configured providers and application version.</text>
 </svg>
