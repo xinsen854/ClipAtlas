@@ -206,41 +206,53 @@ ClipAtlas 以本地素材目录和本地数据库为基础，减少对中心化�
 
 ## 软件截图
 
-以下图片来自仓库中现有的软件截图；后续将补充 14 层画面解析、AI 导演、文案/旁白和可编辑时间线的专门截图，让两条创作链路与草稿出口一目了然。
+以下为从实际运行的 ClipAtlas 界面截取的画面，覆盖素材管理、多模态解析、AI 辅助创作与粗剪工作流。
 
-### 工作台
+### 工作台与画面分析
 
-![ClipAtlas 工作台](docs/screenshots/workbench.png)
+![ClipAtlas 工作台](docs/screenshots/dashboard.webp)
 
-查看项目、素材处理进度和主要工作区。
+主工作台与项目工作区。
 
-### 素材库
+![ClipAtlas 画面分析](docs/screenshots/analysis.webp)
 
-![ClipAtlas 素材库](docs/screenshots/library.png)
+查看视频画面分析结果。
 
-浏览本地素材并查看解析状态。
+![ClipAtlas 视觉索引](docs/screenshots/visual-index.webp)
 
-### 自然语言素材搜索
+视觉索引与素材检索相关界面。
 
-![ClipAtlas 搜索结果](docs/screenshots/search-results.png)
+### OCR 与语音识别
 
-查看候选画面、匹配结果和源视频时间位置。
+![ClipAtlas OCR](docs/screenshots/ocr.webp)
 
-### 局域网共享搜索
+OCR 相关处理界面。
 
-![ClipAtlas 局域网搜索](docs/screenshots/lan-search.png)
+![ClipAtlas ASR](docs/screenshots/asr.webp)
 
-在局域网中向其他设备提供素材搜索与预览。
+语音识别（ASR）相关处理界面。
 
-### 下一批需要补充的真实界面
+### AI 导演与文案/旁白
 
-为避免用概念图冒充软件截图，以下页面会在获得实际运行截图后补入：
+![ClipAtlas AI Director](docs/screenshots/ai-director-en.webp)
 
-- 14 层画面解析与段落级语义描述
-- AI 导演生成故事方向 / 内容节点的页面
-- 导入文案与旁白、逐段匹配画面的页面
-- 同语义替换候选与镜头替换操作
-- 可编辑时间线，以及剪映草稿 / OTIO 导出入口
+AI Director 页面，保留了其实际运行时的英文界面。
+
+![ClipAtlas 文案与旁白](docs/screenshots/script-voiceover.webp)
+
+文案 / 旁白相关创作界面。
+
+### 粗剪与 Hypit 工作流
+
+![ClipAtlas 粗剪工作区](docs/screenshots/roughcut.webp)
+
+粗剪相关工作区。
+
+![Hypit 工作流界面](docs/screenshots/hypit.webp)
+
+Hypit 相关工作流界面。
+
+工作流示意图另见 [workflow.svg](docs/screenshots/workflow.svg)。
 
 ## 技术组成
 
@@ -366,15 +378,53 @@ These are capability layers, not a claim that every file must invoke 14 independ
 
 ### Screenshots
 
-Existing real application captures are stored in `docs/screenshots/`:
+The images below are captures from the running ClipAtlas application, covering the workspace, multimodal analysis, AI-assisted creation and rough-cut workflow.
 
-- `workbench.png` — main workspace
-- `library.png` — local media library
-- `search-results.png` — natural-language search results
-- `lan-search.png` — LAN search and preview
-- `workflow.svg` — architecture and workflow overview
+#### Workspace and visual analysis
 
-Additional captures of the 14-layer analysis, AI Director, script-and-voiceover workflow, semantic replacement and editable timeline will be added from the running application. No concept art is presented as a real application screenshot.
+![ClipAtlas dashboard](docs/screenshots/dashboard.webp)
+
+Main workspace and project view.
+
+![ClipAtlas visual analysis](docs/screenshots/analysis.webp)
+
+Video-frame analysis view.
+
+![ClipAtlas visual index](docs/screenshots/visual-index.webp)
+
+Visual indexing and media discovery interface.
+
+#### OCR and speech recognition
+
+![ClipAtlas OCR](docs/screenshots/ocr.webp)
+
+OCR-related processing interface.
+
+![ClipAtlas ASR](docs/screenshots/asr.webp)
+
+Automatic speech recognition interface.
+
+#### AI Director and script/voiceover
+
+![ClipAtlas AI Director](docs/screenshots/ai-director-en.webp)
+
+AI Director interface, shown in its original English UI.
+
+![ClipAtlas script and voiceover](docs/screenshots/script-voiceover.webp)
+
+Script and voiceover workflow interface.
+
+#### Rough cut and Hypit workflow
+
+![ClipAtlas rough-cut workspace](docs/screenshots/roughcut.webp)
+
+Rough-cut workspace.
+
+![Hypit workflow interface](docs/screenshots/hypit.webp)
+
+Hypit-related workflow interface.
+
+See also the [workflow diagram](docs/screenshots/workflow.svg).
 
 ### Technology
 
